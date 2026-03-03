@@ -144,20 +144,7 @@ export function Sidebar() {
         {generalItems.map((item) => (
           <NavItem key={item.href} {...item} />
         ))}
-        <button
-          style={{
-            display: "flex", alignItems: "center", gap: "10px",
-            padding: "8px 12px", borderRadius: "var(--radius-md)",
-            background: "transparent", border: "none",
-            color: "var(--color-text-muted)", fontSize: "0.875rem", fontWeight: 500,
-            width: "100%", cursor: "pointer",
-            transition: "background 150ms, color 150ms",
-          }}
-          className="sidebar-nav-item"
-        >
-          <HelpCircle className="w-4 h-4 shrink-0" style={{ color: "var(--color-text-faint)" }} />
-          <span>Help</span>
-        </button>
+        <NavItem href="/help" label="Help" icon={HelpCircle} />
       </nav>
 
       {/* ── Pinned User Area ── */}
